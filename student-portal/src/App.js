@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 import "./App.css";
-import ExpenseItem from "./components/ExpenseItem";
+import Expenses from "./components/Expenses/Expenses";
 
 function App() {
   const expenses = [
@@ -19,16 +19,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Typography variant="h2">Welcome Anil</Typography>
-        <ExpenseItem
-          title={expenses[0].title}
-          amount={expenses[0].amount}
-          date={expenses[0].date}
-        />
-        <ExpenseItem
-          title={expenses[1].title}
-          amount={expenses[1].amount}
-          date={expenses[1].date}
-        />
+        <Expenses items={expenses} />
       </header>
     </div>
   );
