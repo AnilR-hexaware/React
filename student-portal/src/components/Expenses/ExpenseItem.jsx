@@ -3,6 +3,7 @@ import Grid from "@mui/material/Grid";
 import ExpenseDate from "./ExpenseDate";
 import Card from "../UI/Card";
 import { useState } from "react";
+import ExpenseFilter from "./ExpenseFilter";
 
 const ExpenseItem = (props) => {
   const [title, setTitle] = useState(props.title);

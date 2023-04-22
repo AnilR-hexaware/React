@@ -16,11 +16,15 @@ function App() {
       date: new Date(2021, 9, 20),
     },
   ];
+
+  const addExpenseHandler = (expense) => {
+    console.log("expense");
+  };
   return (
     <div className="App">
       <header className="App-header">
         <Typography variant="h2">Welcome Anil</Typography>
-        <NewExpenses />
+        <NewExpenses onAddExpense={addExpenseHandler} />
         <Expenses items={expenses} />
       </header>
     </div>

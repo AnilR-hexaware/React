@@ -1,7 +1,7 @@
 import { Button, FormGroup, TextField } from "@mui/material";
 import React, { useState } from "react";
 
-const ExpensesForm = () => {
+const ExpensesForm = (props) => {
   const [newTitle, setNewTitle] = useState("");
   const [amount, setAmount] = useState();
   const [date, setDate] = useState("");
@@ -33,7 +33,7 @@ const ExpensesForm = () => {
       amount: amount,
       date: new Date(date),
     };
-    console.log(expensesData);
+    props.onSaveExpenseData(expensesData);
     setNewTitle("");
     setAmount("");
     setDate("");
