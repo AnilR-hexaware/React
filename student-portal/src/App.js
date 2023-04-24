@@ -2,6 +2,7 @@ import { Typography } from "@mui/material";
 import "./App.css";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpenses from "./components/NewExpenses/NewExpenses";
+import Pagination from "./components/Pagination/Pagination";
 
 function App() {
   const expenses = [
@@ -26,6 +27,7 @@ function App() {
         <Typography variant="h2">Welcome Anil</Typography>
         <NewExpenses onAddExpense={addExpenseHandler} />
         <Expenses items={expenses} />
+        <Pagination />
       </header>
     </div>
   );

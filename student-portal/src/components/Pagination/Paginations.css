@@ -1,0 +1,18 @@
+.products {
+  display: flex;
+  justify-content: center;
+}
+.products1 > img {
+  width: 100%;
+}
+.pagination > span {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.pagination-point {
+  background-color: blueviolet;
+}
+.pagination-diabled {
+  opacity: 0;
+}
