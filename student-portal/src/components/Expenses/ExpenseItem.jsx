@@ -6,28 +6,27 @@ import { useState } from "react";
 import ExpenseFilter from "./ExpenseFilter";
 
 const ExpenseItem = (props) => {
-  const [title, setTitle] = useState(props.title);
-
-  const clickHandler = () => {
-    setTitle("Updated!");
-    console.log(title);
-  };
+  /* const [title, setTitle] = useState(props.title);
+   const clickHandler = () => {
+     setTitle("Updated!");
+     console.log(title);
+   }; */
   return (
     <>
       <Card>
         <Grid container>
-          <Grid item xs={3}>
-            <Typography variant="caption">{title}</Typography>
+          <Grid item xs={4}>
+            <Typography variant="caption">{props.title}</Typography>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={4}>
             <Typography variant="body2">{props.amount}</Typography>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={4}>
             <ExpenseDate date={props.date} />
           </Grid>
-          <Grid item xs={3}>
+          {/* <Grid item xs={3}>
             <Button onClick={clickHandler}>Change Title</Button>
-          </Grid>
+          </Grid> */}
         </Grid>
       </Card>
     </>
