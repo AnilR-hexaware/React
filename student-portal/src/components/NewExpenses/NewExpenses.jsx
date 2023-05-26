@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import ExpensesForm from "./ExpensesForm";
+import "./NewExpenses.css";
 import { Button } from "@mui/material";
+
 const NewExpenses = (props) => {
   const saveExpenseDataHandler = (enteredExpenseData) => {
     const expenseData = { ...enteredExpenseData, id: Math.random().toString() };
@@ -18,7 +20,7 @@ const NewExpenses = (props) => {
     setIsEditing(false);
   };
   return (
-    <>
+    <div className="new-expense">
       {!isEditing ? (
         <Button onClick={startEditingHandler}>Add Expense</Button>
       ) : (
@@ -27,7 +29,7 @@ const NewExpenses = (props) => {
           onCancel={stopEditingHandler}
         />
       )}
-    </>
+    </div>
   );
 };
 

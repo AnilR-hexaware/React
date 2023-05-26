@@ -1,9 +1,17 @@
 .products {
   display: flex;
+  width: 80%;
+  margin: auto;
   justify-content: center;
+  padding: 10px;
+  background-color: rgb(255, 232, 129);
 }
 .products1 > img {
-  width: 100%;
+  width: 90%;
+  height: 50%;
+}
+.pagination {
+  padding: 10px;
 }
 .pagination > span {
   padding: 0.5rem;
@@ -12,6 +20,7 @@
 
 .pagination-point {
   background-color: blueviolet;
+  border-radius: 50px;
 }
 .pagination-diabled {
   opacity: 0;
